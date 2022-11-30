@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --gradient: #E5243B 0%, #E5243B 5.882352941176471%, #DDA53A 5.882352941176471%, #DDA53A 11.764705882352942%, #4C9F38 11.764705882352942%, #4C9F38 17.647058823529413%, #C6192D 17.647058823529413%, #C6192D 23.529411764705884%, #FF3921 23.529411764705884%, #FF3921 29.411764705882355%, #22BDE2 29.411764705882355%, #22BDE2 35.294117647058826%, #FCC30A 35.294117647058826%, #FCC30A 41.1764705882353%, #A11942 41.1764705882353%, #A11942 47.05882352941177%, #FD6924 47.05882352941177%, #FD6924 52.94117647058824%, #DD1367 52.94117647058824%, #DD1367 58.82352941176471%, #FD9D23 58.82352941176471%, #FD9D23 64.70588235294119%, #BF8B2E 64.70588235294119%, #BF8B2E 70.58823529411765%, #3E7E44 70.58823529411765%, #3E7E44 76.47058823529412%, #0397D9 76.47058823529412%, #0397D9 82.3529411764706%, #55C02B 82.3529411764706%, #55C02B 88.23529411764707%, #02689D 88.23529411764707%, #02689D 94.11764705882354%, #1A476A 94.11764705882354%, #1A476A 100%;
+    --gradient2: #E5243B 0%, #E5243B 4.882352941176471%, transparent 4.882352941176471%, transparent 5.882352941176471%, #DDA53A 5.882352941176471%, #DDA53A 10.764705882352942%, transparent 10.764705882352942%, transparent 11.764705882352942%, #4C9F38 11.764705882352942%, #4C9F38 16.647058823529413%, transparent 16.647058823529413%, transparent 17.647058823529413%, #C6192D 17.647058823529413%, #C6192D 22.529411764705884%, transparent 22.529411764705884%, transparent 23.529411764705884%, #FF3921 23.529411764705884%, #FF3921 28.411764705882355%, transparent 28.411764705882355%, transparent 29.411764705882355%, #22BDE2 29.411764705882355%, #22BDE2 34.294117647058826%, transparent 34.294117647058826%, transparent 35.294117647058826%, #FCC30A 35.294117647058826%, #FCC30A 40.1764705882353%, transparent 40.1764705882353%, transparent 41.1764705882353%, #A11942 41.1764705882353%, #A11942 46.05882352941177%, transparent 46.05882352941177%, transparent 47.05882352941177%, #FD6924 47.05882352941177%, #FD6924 51.94117647058824%, transparent 51.94117647058824%, transparent 52.94117647058824%, #DD1367 52.94117647058824%, #DD1367 57.82352941176471%, transparent 57.82352941176471%, transparent 58.82352941176471%, #FD9D23 58.82352941176471%, #FD9D23 63.70588235294119%, transparent 63.70588235294119%, transparent 64.70588235294119%, #BF8B2E 64.70588235294119%, #BF8B2E 69.58823529411765%, transparent 69.58823529411765%, transparent 70.58823529411765%, #3E7E44 70.58823529411765%, #3E7E44 75.47058823529412%, transparent 75.47058823529412%, transparent 76.47058823529412%, #0397D9 76.47058823529412%, #0397D9 81.3529411764706%, transparent 81.3529411764706%, transparent 82.3529411764706%, #55C02B 82.3529411764706%, #55C02B 87.23529411764707%, transparent 87.23529411764707%, transparent 88.23529411764707%, #02689D 88.23529411764707%, #02689D 93.11764705882354%, transparent 93.11764705882354%, transparent 94.11764705882354%, #1A476A 94.11764705882354%, #1A476A 99%, transparent 99%, transparent 100%;
+}
+
+body{
+    background-color: #E5E5E5;
+}
+
+.navbar {
+    border-bottom: 10px solid black;
+    border-image: linear-gradient(to right, var(--gradient));
+    border-image-slice: 1;
+}
+
+.main-title {
+    width: 640px;
+    height: 640px;
+    padding: 100px;
+    position: relative;
+    color: #0C3351;
+    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    left: calc(50% - 320px);
+    top: 80px;
+}
+
+.main-title,
+.indicadores,
+.indicador {
+    display: flex;
+    justify-content: center;
+}
+
+.main-title,
+.indicador {
+
+    align-items: center;
+}
+
+.main-title::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 10px;
+    background: conic-gradient(var(--gradient2));
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 64px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.test {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: dashed 10px white;
+    border-radius: 50%;
+    background-image: linear-gradient(white, white), conic-gradient(var(--gradient));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.spacer {
+    position: relative;
+}
+
+.spacer hr {
+    border-top: 2px solid black;
+}
+
+.spacer div {
+    position: absolute;
+    left: calc(50% - 60px);
+    top: calc(50% - 5px);
+    height: 10px;
+    background-color: #4F8099;
+    width: 120px;
+    border-radius: 5px;
+}
+
+.indicadores {
+    height: 360px;
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.indicadores1 {
+    align-items: flex-end;
+}
+
+.indicadores1 .indicador {
+    border-radius: 10px 10px 0 0;
+}
+
+.indicadores2 .indicador {
+    border-radius: 0 0 10px 10px;
+}
+
+.indicadores .indicador {
+    flex-direction: column;
+    padding: 30px;
+}
+
+.indicador1 {
+    height: 320px;
+}
+
+.indicadores1 .indicador1,
+.indicadores2 .indicador4 {
+    background-color: #FD9D23;
+}
+
+.indicadores .indicador2 {
+    height: 360px;
+}
+
+.indicadores1 .indicador2,
+.indicadores2 .indicador3 {
+    background-color: #02689D;
+}
+
+.indicador3 {
+    height: 300px;
+}
+
+.indicadores1 .indicador3,
+.indicadores2 .indicador2 {
+    background-color: #4C9F38;
+}
+
+.indicador4 {
+    height: 270px;
+}
+
+.indicadores1 .indicador4,
+.indicadores2 .indicador1 {
+    background-color: #DD1367;
+}
+
+footer {
+    min-height: 540px;
+    background-color: #1A476A;
+    color: white;
+}
+
+.sobre p {
+    font-size: 20px;
+    color: #1A476A;
+}
+
+.btn{
+    width: 150px;
+    height: 150px;
+    font-weight: 500;
+    font-family: 'Oswald';
+}
+
+.btn span{
+    font-size: 55px;
+}
+
+.buttons{
+    height: 800px;
+}
+
+.buttons button{
+    position: absolute;
+}
+
+.buttons button:hover{
+    background-color: white;
+}
