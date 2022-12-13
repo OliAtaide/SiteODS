@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+    h3 {
+        font-family: Oswald;
+        font-size: 24px !important;
+    }
+
+    .button-title {
+        height: 800px;
+        width: 800px;
+        position: absolute;
+        left: calc(50% - 400px);
+        top: 80px;
+        padding: 32px;
+    }
+
+    .button-title p {
+        font-size: 16px;
+    }
+
+    .button-title .row {
+        /*margin-left: auto;
+        margin-right: auto;*/
+        width: 50%;
+    }
+
+    .button-title .logo,
+    .projetos {
+        padding: 12px;
+        border: 2px solid #E5243B;
+        border-radius: 5px;
+    }
+
+    .projetos {
+        width: 600px;
+        height: 240px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .button-title::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        padding: 10px;
+        background: repeating-conic-gradient(#E5243B 0deg 18deg, transparent 18deg 21.17647058823529deg);
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+
+    .text {
+        width: 100%;
+        height: 100%;
+        /*BLUE BG*/
+        position: relative;
+        margin: 0;
+    }
+
+    .text .p {
+        height: 100%;
+        line-height: 1.25;
+        padding: 0;
+        text-align: center;
+    }
+
+    .text::before {
+        content: "";
+        width: 50%;
+        height: 100%;
+        float: left;
+        shape-outside: polygon(0 0,
+                98% 0,
+                50% 6%,
+                23.4% 17.3%,
+                6% 32.6%,
+                0 50%,
+                6% 65.6%,
+                23.4% 82.7%,
+                50% 94%,
+                98% 100%,
+                0 100%);
+        shape-margin: 0;
+    }
+
+    .text .p::before {
+        content: "";
+        width: 50%;
+        height: 100%;
+        float: right;
+        shape-outside: polygon(2% 0%,
+                100% 0%,
+                100% 100%,
+                2% 100%,
+                50% 94%,
+                76.6% 82.7%,
+                94% 65.6%,
+                100% 50%,
+                94% 32.6%,
+                76.6% 17.3%,
+                50% 6%);
+        shape-margin: 0;
+    }
+
+    .logo {
+        height: 80px;
+    }
+
+    .d-grid {
+        justify-content: center;
+        column-gap: 40px;
+    }
+
+    .d-grid .logo {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 180px;
+    }
+
+    .hr{
+        border: 1px solid #E5BEC3;
+        width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<body>
+
+    <div class="button-title rounded-circle button-title text-center">
+        <div class="text">
+            <div class="p">
+                <h3>
+                    01. Erradicação da pobreza
+                </h3>
+                <p class="">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="hr my-3">
+
+                </div>
+                <h3>
+                    Nossos projetos
+                </h3>
+                <div class="d-grid my-4">
+                    <div class="logo">
+                        <img class="img-fluid" src="v1_logo-lais-azul-1.svg" alt="">
+                    </div>
+                    <div class="logo">
+                        <img class="img-fluid" src="ufrn-logo.png" alt="">
+                    </div>
+                </div>
+                <div class="projetos my-3">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

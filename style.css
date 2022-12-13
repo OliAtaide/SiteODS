@@ -5,7 +5,7 @@
     --gradient2: #E5243B 0%, #E5243B 4.882352941176471%, transparent 4.882352941176471%, transparent 5.882352941176471%, #DDA53A 5.882352941176471%, #DDA53A 10.764705882352942%, transparent 10.764705882352942%, transparent 11.764705882352942%, #4C9F38 11.764705882352942%, #4C9F38 16.647058823529413%, transparent 16.647058823529413%, transparent 17.647058823529413%, #C6192D 17.647058823529413%, #C6192D 22.529411764705884%, transparent 22.529411764705884%, transparent 23.529411764705884%, #FF3921 23.529411764705884%, #FF3921 28.411764705882355%, transparent 28.411764705882355%, transparent 29.411764705882355%, #22BDE2 29.411764705882355%, #22BDE2 34.294117647058826%, transparent 34.294117647058826%, transparent 35.294117647058826%, #FCC30A 35.294117647058826%, #FCC30A 40.1764705882353%, transparent 40.1764705882353%, transparent 41.1764705882353%, #A11942 41.1764705882353%, #A11942 46.05882352941177%, transparent 46.05882352941177%, transparent 47.05882352941177%, #FD6924 47.05882352941177%, #FD6924 51.94117647058824%, transparent 51.94117647058824%, transparent 52.94117647058824%, #DD1367 52.94117647058824%, #DD1367 57.82352941176471%, transparent 57.82352941176471%, transparent 58.82352941176471%, #FD9D23 58.82352941176471%, #FD9D23 63.70588235294119%, transparent 63.70588235294119%, transparent 64.70588235294119%, #BF8B2E 64.70588235294119%, #BF8B2E 69.58823529411765%, transparent 69.58823529411765%, transparent 70.58823529411765%, #3E7E44 70.58823529411765%, #3E7E44 75.47058823529412%, transparent 75.47058823529412%, transparent 76.47058823529412%, #0397D9 76.47058823529412%, #0397D9 81.3529411764706%, transparent 81.3529411764706%, transparent 82.3529411764706%, #55C02B 82.3529411764706%, #55C02B 87.23529411764707%, transparent 87.23529411764707%, transparent 88.23529411764707%, #02689D 88.23529411764707%, #02689D 93.11764705882354%, transparent 93.11764705882354%, transparent 94.11764705882354%, #1A476A 94.11764705882354%, #1A476A 99%, transparent 99%, transparent 100%;
 }
 
-body{
+body {
     background-color: #E5E5E5;
 }
 
@@ -170,25 +170,260 @@ footer {
     color: #1A476A;
 }
 
-.btn{
+.btn-bg {
     width: 150px;
     height: 150px;
     font-weight: 500;
     font-family: 'Oswald';
 }
 
-.btn span{
+.btn-mini {
+    width: 75px;
+    height: 75px;
+}
+
+.btn-bg span {
     font-size: 55px;
 }
 
-.buttons{
-    height: 800px;
-}
-
-.buttons button{
+.buttons-mini-col {
+    width: 180px;
     position: absolute;
 }
 
-.buttons button:hover{
-    background-color: white;
+.buttons-mini-l .btn-mini:nth-child(odd) {
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+.buttons-mini-r .btn-mini:nth-child(even) {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.buttons-mini-l .btn-mini:nth-child(even),
+.buttons-mini-r .btn-mini:nth-child(odd) {
+    margin-bottom: 30px;
+}
+
+.buttons-mini-r {
+    right: 0;
+}
+
+.buttons-mini-col span {
+    font-size: 40px;
+}
+
+.buttons,
+.buttons-mini {
+    height: 800px;
+}
+
+.buttons button {
+    position: absolute;
+}
+
+.button-voltar {
+    border: 2px solid #525252;
+    color: #525252;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+h3 {
+    font-family: Oswald;
+    font-size: 24px !important;
+}
+
+.button-title {
+    height: 800px;
+    width: 800px;
+    position: absolute;
+    left: calc(50% - 400px);
+    top: 0;
+    padding: 32px;
+}
+
+.button-title p {
+    font-size: 16px;
+}
+
+.button-title .row {
+    /*margin-left: auto;
+    margin-right: auto;*/
+    width: 50%;
+}
+
+.button-title .logo,
+.projetos {
+    padding: 12px;
+    border: 2px solid #E5243B;
+    border-radius: 5px;
+}
+
+.projetos {
+    width: 400px;
+    height: 240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-title::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 10px;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.text {
+    width: 100%;
+    height: 100%;
+    /*BLUE BG*/
+    position: relative;
+    margin: 0;
+}
+
+.text .p {
+    height: 100%;
+    line-height: 1.25;
+    padding: 0;
+    text-align: center;
+}
+
+.text::before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    float: left;
+    shape-outside: polygon(0 0,
+            98% 0,
+            50% 6%,
+            23.4% 17.3%,
+            6% 32.6%,
+            0 50%,
+            6% 65.6%,
+            23.4% 82.7%,
+            50% 94%,
+            98% 100%,
+            0 100%);
+    shape-margin: 0;
+}
+
+.text .p::before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    float: right;
+    shape-outside: polygon(2% 0%,
+            100% 0%,
+            100% 100%,
+            2% 100%,
+            50% 94%,
+            76.6% 82.7%,
+            94% 65.6%,
+            100% 50%,
+            94% 32.6%,
+            76.6% 17.3%,
+            50% 6%);
+    shape-margin: 0;
+}
+
+.logo {
+    height: 80px;
+}
+
+.d-grid {
+    justify-content: center;
+    column-gap: 40px;
+}
+
+.d-grid .logo {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 180px;
+}
+
+.hr{
+    border: 1px solid #E5BEC3;
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.buttons-bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .main-title {
+        width: 100vw;
+        height: 100vw;
+        position: static !important;
+        padding: 40px;
+    }
+
+    .main-title h1 {
+        font-size: 32px;
+    }
+
+    .main-title::before {
+        height: 100vw;
+    }
+
+    .btn-bg {
+        position: initial !important;
+        width: 100%;
+        height: 30vw;
+        font-size: 12px;
+    }
+
+    .buttons-mini .btn-bg {
+        width: 30vw;
+    }
+
+    .btn-bg span {
+        font-size: 25px;
+    }
+
+    .buttons-mini-col {
+        width: 100%;
+        display: grid;
+        position: static;
+        grid-template-columns: 22vw 22vw 22vw 22vw;
+        gap: 2vw;
+        margin-top: 2vw;
+    }
+
+    .btn-mini {
+        margin: 0 !important;
+    }
+
+    .buttons,
+    .buttons-mini {
+        height: auto;
+    }
+
+    .button-voltar {
+        position: static;
+        margin-left: auto;
+        margin-top: 3vw;
+    }
+
+    .buttons-bg {
+        display: grid;
+        grid-template-columns: 30vw 30vw 30vw;
+        gap: 3vw;
+    }
 }
