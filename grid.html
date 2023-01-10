@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+
+<style>
+
+    .grid {
+        height: 50vh;
+        display: grid;
+
+        border-radius: .5em;
+        overflow: hidden;
+        background-color: white;
+
+        padding: 0;
+
+        grid-template-areas:
+            "A A A A A A A A A B B B B B C C C C C"
+            "A A A A A A A A A B B B B B C C C C C"
+            "A A A A A A A A A B B B B B C C C C C"
+            "A A A A A A A A A B B B B B C C C C C"
+            "A A A A A A A A A B B B B B C C C C C"
+            "A A A A A A A A A B B B B B C C C C C"
+            "A A A A A A A A A B B B B B C C C C C"
+            "A A A A A A A A A B B B B B C C C C C"
+            "A A A A A A A A A D D D D E E F F G G"
+            "A A A A A A A A A D D D D E E F F G G"
+            "H H H H H H I I I J J J J K K F F G G"
+            "H H H H H H I I I J J J J K K F F G G"
+            "H H H H H H I I I J J J J K K F F G G"
+            "H H H H H H I I I J J J J K K L L L M"
+            "H H H H H H I I I J J J J N N O O O M";
+    }
+
+    .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+
+        font-size: 1.5em;
+        font-weight: 700;
+        box-sizing: border-box;
+    }
+
+    .a {
+        grid-area: A;
+        background-color: #a0ddff;
+    }
+
+    .b {
+        grid-area: B;
+        background-color: #c1cefe;
+    }
+
+    .c {
+        grid-area: C;
+        background-color: #758ecd;
+    }
+
+    .d {
+        grid-area: D;
+        background-color: #7189ff;
+    }
+
+    .e {
+        grid-area: E;
+        background-color: #624cab;
+    }
+
+    .f {
+        grid-area: F;
+        background-color: #5d2e8c;
+    }
+
+    .g {
+        grid-area: G;
+        background-color: #7a7a7a;
+    }
+
+    .h {
+        grid-area: H;
+        background-color: #a0ddff;
+    }
+
+    .i {
+        grid-area: I;
+        background-color: #c1cefe;
+    }
+
+    .j {
+        grid-area: J;
+        background-color: #758ecd;
+    }
+
+    .k {
+        grid-area: K;
+        background-color: #7189ff;
+    }
+
+    .l {
+        grid-area: L;
+        background-color: #624cab;
+    }
+
+    .m {
+        grid-area: M;
+        background-color: #5d2e8c;
+    }
+
+    .n {
+        grid-area: N;
+        background-color: #7a7a7a;
+    }
+
+    .o {
+        grid-area: O;
+        background-color: #a0ddff;
+    }
+</style>
+
+<body>
+    <div class="container grid">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+        <div class="item g">G</div>
+        <div class="item h">H</div>
+        <div class="item i">I</div>
+        <div class="item j">J</div>
+        <div class="item k">K</div>
+        <div class="item l">L</div>
+        <div class="item m">M</div>
+        <div class="item n">N</div>
+        <div class="item o">O</div>
+    </div>
+</body>
+
+</html>
